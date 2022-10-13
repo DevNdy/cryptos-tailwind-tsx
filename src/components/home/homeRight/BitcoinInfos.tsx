@@ -20,7 +20,7 @@ const BitcoinInfos = () => {
   }
 
   return (
-    <div className="flex flex-row justify-center items-center bg-white h-14 w-[95%] mt-5 shadow-inner pt-3 pb-3 rounded-md">
+    <div className="flex flex-row justify-center items-center bg-white h-14 w-[95%] mt-5 shadow-inner pt-3 pb-3 ml-8 rounded-md hover:scale-105 duration-700">
       {cryptos
         .filter((f: any) => f.name === "Bitcoin")
         .map((e: any) => (
