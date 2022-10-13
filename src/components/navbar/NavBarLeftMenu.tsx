@@ -21,11 +21,11 @@ const NavBarLeftMenu = () => {
         <li className={liStyle} onClick={() => toRoute("/")}>
           Accueil
         </li>
-        <li className={liStyle} onClick={() => toRoute("/cryptomonnaies")}>
+        <li className={liStyle} onClick={() => toRoute("/classement")}>
           Classement
         </li>
-        <li className={liStyle} onClick={() => toRoute("/")}>
-          Contact
+        <li className={liStyle} onClick={() => toRoute("/analyses")}>
+          Analyses
         </li>
       </ul>
     </nav>
