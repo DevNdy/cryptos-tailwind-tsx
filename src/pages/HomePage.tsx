@@ -1,5 +1,5 @@
 import React from "react";
-import HomeBottom from "../components/home/homeBottom/HomeBottom";
+import HomeBottom from "../components/home/HomeBottom";
 import HomeLeftSide from "../components/home/HomeLeftSide";
 import HomeRightSide from "../components/home/homeRight/HomeRightSide";
 

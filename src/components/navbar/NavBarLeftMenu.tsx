@@ -20,7 +20,7 @@ const NavBarLeftMenu = () => {
       />
       <NavLinkUI
         title="Cryptomonnaies"
-        to="/"
+        to="/cryptomonnaies"
         onClick={() => setIsSelect(1)}
         className={isSelect === 1 ? styleSelect : styleNotSelect}
       />
