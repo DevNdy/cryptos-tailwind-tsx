@@ -6,22 +6,33 @@ interface Props {
 }
 
 type ContextType = {
+  isSelect: number;
+  setIsSelect: (newState: number) => void;
   cryptos: any;
   nbrCoins: number;
   setNbrCoins: (newState: number) => void;
   fetchCryptos: () => void;
+  searchCrypto: string;
+  setSearchCrypto: (newState: string) => void;
 };
 
 const initialValue = {
+  isSelect: 0,
+  setIsSelect: () => {},
   cryptos: [],
   nbrCoins: 20,
   setNbrCoins: () => {},
   fetchCryptos: () => {},
+  searchCrypto: "",
+  setSearchCrypto: () => {},
 };
 
 export const AppContext = createContext<ContextType>(initialValue);
 
 export function AppContextProvider({ children }: Props) {
+  //Nav:
+  const [isSelect, setIsSelect] = useState(0);
+
   //cryptos:
   const [cryptos, setCryptos] = useState<any>(initialValue.cryptos);
   const [nbrCoins, setNbrCoins] = useState(initialValue.nbrCoins);
@@ -60,8 +71,22 @@ export function AppContextProvider({ children }: Props) {
       });
   };
 
+  //search:
+  const [searchCrypto, setSearchCrypto] = useState("");
+
   return (
-    <AppContext.Provider value={{ cryptos, nbrCoins, setNbrCoins, fetchCryptos }}>
+    <AppContext.Provider
+      value={{
+        isSelect,
+        setIsSelect,
+        cryptos,
+        nbrCoins,
+        setNbrCoins,
+        fetchCryptos,
+        searchCrypto,
+        setSearchCrypto,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

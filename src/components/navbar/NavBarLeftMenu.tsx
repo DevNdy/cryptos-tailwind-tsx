@@ -1,35 +1,33 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import NavLinkUI from "../../ui-reusable/NavLinkUI";
+import React, { useContext, useState } from "react";
+import { createSearchParams, useNavigate } from "react-router-dom";
+import { AppContext } from "../../context/context";
 
 const NavBarLeftMenu = () => {
-  const [isSelect, setIsSelect] = useState(0);
+  const { isSelect, setIsSelect } = useContext(AppContext);
+  const navigate = useNavigate();
 
-  const styleSelect = " border-solid border-2 border-orange-400  rounded-lg pl-1 pr-1 duration-200";
+  function toRoute(route: string) {
+    navigate({
+      pathname: route,
+    });
+  }
 
-  const styleNotSelect =
-    "border-slate-900 border-solid border-2 hover:border-orange-400  rounded-lg pl-1 pr-1 duration-200";
+  const liStyle =
+    "mr-[85px] relative cursor-pointer hover:underline hover:underline-offset-8] decoration-wavy tracking-wide ";
 
   return (
     <nav className="flex flex-row justify-between items-center w-96 h-full text-orange-400 ml-20">
-      <NavLinkUI
-        title="Accueil"
-        to="/"
-        onClick={() => setIsSelect(0)}
-        className={isSelect === 0 ? styleSelect : styleNotSelect}
-      />
-      <NavLinkUI
-        title="Cryptomonnaies"
-        to="/"
-        onClick={() => setIsSelect(1)}
-        className={isSelect === 1 ? styleSelect : styleNotSelect}
-      />
-      <NavLinkUI
-        title="Analyses"
-        to="/"
-        onClick={() => setIsSelect(2)}
-        className={isSelect === 2 ? styleSelect : styleNotSelect}
-      />
+      <ul className="flex flex-row">
+        <li className={liStyle} onClick={() => toRoute("/")}>
+          Accueil
+        </li>
+        <li className={liStyle} onClick={() => toRoute("/cryptomonnaies")}>
+          Classement
+        </li>
+        <li className={liStyle} onClick={() => toRoute("/")}>
+          Contact
+        </li>
+      </ul>
     </nav>
   );
 };
