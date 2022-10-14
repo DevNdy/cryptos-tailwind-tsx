@@ -1,9 +1,7 @@
-import React, { useContext, useState } from "react";
-import { createSearchParams, useNavigate } from "react-router-dom";
-import { AppContext } from "../../context/context";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const NavBarLeftMenu = () => {
-  const { isSelect, setIsSelect } = useContext(AppContext);
+const NavBarLeftMenu: React.FC = () => {
   const navigate = useNavigate();
 
   function toRoute(route: string) {
@@ -21,11 +19,11 @@ const NavBarLeftMenu = () => {
         <li className={liStyle} onClick={() => toRoute("/")}>
           Accueil
         </li>
-        <li className={liStyle} onClick={() => toRoute("/cryptomonnaies")}>
+        <li className={liStyle} onClick={() => toRoute("/classement")}>
           Classement
         </li>
-        <li className={liStyle} onClick={() => toRoute("/")}>
-          Contact
+        <li className={liStyle} onClick={() => toRoute("/marketcap")}>
+          MarketCap
         </li>
       </ul>
     </nav>

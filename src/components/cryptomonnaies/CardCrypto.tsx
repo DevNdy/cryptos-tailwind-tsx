@@ -15,7 +15,7 @@ const CardCrypto: React.FC<CardCryptoProps> = ({ name, rank, icon, symbol, price
       href={url}
       target="_blank"
       rel=" noopener noreferrer"
-      className={`w-[650px] flex flex-row justify-between bg-white mt-4 p-2 rounded-md hover:scale-[1.03] duration-700 m-3 `}
+      className={`w-[650px] flex flex-row justify-between bg-slate-100 mt-4 p-2 rounded-md hover:scale-[1.03] duration-700 m-3 `}
     >
       <div className="w-[200px] flex flex-row items-center">
         <h4>{rank}</h4>
