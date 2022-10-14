@@ -5,7 +5,7 @@ import { AppContext } from "../../context/context";
 const DoughnutMarketCap = () => {
   const { cryptos } = useContext(AppContext);
   return (
-    <div className="h-[450px] w-[400px]  bg-slate-300 flex flex-col items-center justify-center rounded-2xl ">
+    <div className="h-[450px] w-[400px]  bg-slate-100 flex flex-col items-center justify-center rounded-2xl ">
       <h2>
         MarketCap du top 5 <span>en $</span>
       </h2>

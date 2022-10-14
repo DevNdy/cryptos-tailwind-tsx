@@ -18,7 +18,7 @@ const CalculMC = () => {
   const styleLabel = "ml-5";
 
   return (
-    <div className="bg-slate-300 mt-20 w-[1000px] p-2 rounded-lg">
+    <div className="bg-slate-100 mt-20 w-[1000px] p-2 rounded-lg">
       <h3 className="ml-6 text-orange-600">Calculer le Market Cap d'une cryptomonnaie:</h3>
       <form onSubmit={handleSubmitCalcule} className="flex flex-row items-end w-full mt-3 ">
         <div>

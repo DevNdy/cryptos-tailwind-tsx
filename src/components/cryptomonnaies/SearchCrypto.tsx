@@ -10,7 +10,7 @@ const SearchCrypto = () => {
       <input
         value={searchCrypto}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchCrypto(e.target.value)}
-        className="w-full h-[26px] pl-1 rounded-sm"
+        className="w-full h-[26px] pl-1 rounded-sm bg-slate-100"
         type="text"
         placeholder="Rechercher une cryptomonnaie..."
       />

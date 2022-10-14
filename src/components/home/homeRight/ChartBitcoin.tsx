@@ -36,7 +36,7 @@ const ChartBitcoin = () => {
   }, []);
 
   return (
-    <div className="h-[54%] w-[95%] mt-12 ml-8 shadow-inner p-3 rounded-md bg-white">
+    <div className="h-[54%] w-[600px] mt-12 ml-8 shadow-inner p-3 rounded-md bg-slate-100">
       <Line
         datasetIdKey="id"
         data={{

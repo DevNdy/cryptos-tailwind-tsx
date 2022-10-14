@@ -2,7 +2,7 @@ import React from "react";
 
 const HomeLeftSide = () => {
   return (
-    <article className="flex flex-col w-[450px] items-center text-gray-100 ml-20">
+    <article className="flex flex-col items-center text-gray-100 ml-20">
       <h2 className="text-3xl mb-5">Bienvenue investisseurs,</h2>
       <h4 className="text-xl mb-4">La crypto c'est quoi?</h4>
       <p className="italic font-light">

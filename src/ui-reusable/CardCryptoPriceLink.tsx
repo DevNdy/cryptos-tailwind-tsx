@@ -17,7 +17,7 @@ const CardCryptoPriceLink: React.FC<CardCryptoPriceLinkProps> = ({
 }) => {
   return (
     <a
-      className="flex flex-row items-center bg-fuchsia-50 h-[40px] pl-2 pr-2 text-slate-900 rounded-lg hover:scale-105 duration-700"
+      className="flex flex-row items-center bg-slate-100 h-[40px] pl-2 pr-2 text-slate-900 rounded-lg hover:scale-105 duration-700"
       href={url}
       target="_blank"
       rel=" noopener noreferrer"
