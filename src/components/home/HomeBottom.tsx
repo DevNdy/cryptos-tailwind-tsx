@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AppContext } from "../../context/context";
 import CardCryptoPriceLink from "../../ui-reusable/CardCryptoPriceLink";
 
-const HomeBottom = () => {
+const HomeBottom: React.FC = () => {
   const { cryptos } = useContext(AppContext);
   console.log(cryptos);
 

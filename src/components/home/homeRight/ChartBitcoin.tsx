@@ -8,7 +8,7 @@ interface ChartBitcoinProps {
   price: string;
 }
 
-const ChartBitcoin = () => {
+const ChartBitcoin: React.FC = () => {
   let heure = new Date().getHours();
   console.log(heure);
 

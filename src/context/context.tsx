@@ -16,6 +16,7 @@ type ContextType = {
   setSearchCrypto: (newState: string) => void;
   result: number;
   setResult: (newState: number) => void;
+  numStr: any;
 };
 
 const initialValue = {
@@ -29,6 +30,7 @@ const initialValue = {
   setSearchCrypto: () => {},
   result: 0,
   setResult: () => {},
+  numStr: (a: string, b: string) => {},
 };
 
 export const AppContext = createContext<ContextType>(initialValue);
@@ -75,6 +77,22 @@ export function AppContextProvider({ children }: Props) {
       });
   };
 
+  //function séparation unité:
+  function numStr(a: string, b: string) {
+    a = "" + a;
+    b = b || " ";
+    var c = "",
+      d = 0;
+    while (a.match(/^0[0-9]/)) {
+      a = a.substr(1);
+    }
+    for (var i = a.length - 1; i >= 0; i--) {
+      c = d !== 0 && d % 3 === 0 ? a[i] + b + c : a[i] + c;
+      d++;
+    }
+    return c;
+  }
+
   //search:
   const [searchCrypto, setSearchCrypto] = useState("");
 
@@ -94,6 +112,7 @@ export function AppContextProvider({ children }: Props) {
         setSearchCrypto,
         result,
         setResult,
+        numStr,
       }}
     >
       {children}

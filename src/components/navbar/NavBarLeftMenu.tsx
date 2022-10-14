@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { createSearchParams, useNavigate } from "react-router-dom";
 import { AppContext } from "../../context/context";
 
-const NavBarLeftMenu = () => {
+const NavBarLeftMenu: React.FC = () => {
   const { isSelect, setIsSelect } = useContext(AppContext);
   const navigate = useNavigate();
 

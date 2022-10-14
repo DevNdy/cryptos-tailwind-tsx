@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Doughnut } from "react-chartjs-2";
 import { AppContext } from "../../context/context";
 
-const DoughnutMarketCap = () => {
+const DoughnutMarketCap: React.FC = () => {
   const { cryptos } = useContext(AppContext);
   return (
     <div className="h-[450px] w-[400px]  bg-slate-100 flex flex-col items-center justify-center rounded-2xl ">

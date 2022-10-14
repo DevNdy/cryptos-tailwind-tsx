@@ -3,7 +3,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { AppContext } from "../../context/context";
 import CardCrypto from "./CardCrypto";
 
-const CryptoList = () => {
+const CryptoList: React.FC = () => {
   const { cryptos, searchCrypto, fetchCryptos } = useContext(AppContext);
   return (
     <div className="pb-4 mt-5">

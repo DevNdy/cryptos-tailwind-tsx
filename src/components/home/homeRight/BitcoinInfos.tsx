@@ -1,23 +1,8 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../../context/context";
 
-const BitcoinInfos = () => {
-  const { cryptos } = useContext(AppContext);
-
-  function numStr(a: any, b: any) {
-    a = "" + a;
-    b = b || " ";
-    var c = "",
-      d = 0;
-    while (a.match(/^0[0-9]/)) {
-      a = a.substr(1);
-    }
-    for (var i = a.length - 1; i >= 0; i--) {
-      c = d !== 0 && d % 3 === 0 ? a[i] + b + c : a[i] + c;
-      d++;
-    }
-    return c;
-  }
+const BitcoinInfos: React.FC = () => {
+  const { cryptos, numStr } = useContext(AppContext);
 
   return (
     <div className="flex flex-row justify-center items-center bg-slate-100 h-14 w-[95%] mt-5 shadow-inner pt-3 pb-3 ml-8 rounded-md hover:scale-105 duration-700">

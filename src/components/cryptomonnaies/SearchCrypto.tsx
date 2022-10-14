@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../context/context";
 
-const SearchCrypto = () => {
+const SearchCrypto: React.FC = () => {
   const { searchCrypto, setSearchCrypto } = useContext(AppContext);
 
   return (

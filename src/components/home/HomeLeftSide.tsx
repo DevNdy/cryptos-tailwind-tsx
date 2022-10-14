@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomeLeftSide = () => {
+const HomeLeftSide: React.FC = () => {
   return (
     <article className="flex flex-col items-center text-gray-100 ml-20">
       <h2 className="text-3xl mb-5">Bienvenue investisseurs,</h2>

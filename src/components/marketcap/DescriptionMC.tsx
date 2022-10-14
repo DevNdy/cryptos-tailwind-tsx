@@ -1,6 +1,6 @@
 import React from "react";
 
-const DescriptionMC = () => {
+const DescriptionMC: React.FC = () => {
   return (
     <p className="w-[500px] text-gray-100 ml-[100px]">
       Le <em>« Market Cap »</em> d’une cryptomonnaie s’obtient en multipliant le dernier prix auquel

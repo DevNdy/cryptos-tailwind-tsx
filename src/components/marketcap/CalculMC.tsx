@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from "react";
 import { AppContext } from "../../context/context";
 
-const CalculMC = () => {
+const CalculMC: React.FC = () => {
   const { result, setResult } = useContext(AppContext);
 
   const [nbrToken, setNbrToken] = useState<number>(0);
@@ -10,7 +10,6 @@ const CalculMC = () => {
   function handleSubmitCalcule(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setResult(nbrToken * priceToken);
-    console.log(result);
   }
 
   //style:
