@@ -14,6 +14,8 @@ type ContextType = {
   fetchCryptos: () => void;
   searchCrypto: string;
   setSearchCrypto: (newState: string) => void;
+  result: number;
+  setResult: (newState: number) => void;
 };
 
 const initialValue = {
@@ -25,6 +27,8 @@ const initialValue = {
   fetchCryptos: () => {},
   searchCrypto: "",
   setSearchCrypto: () => {},
+  result: 0,
+  setResult: () => {},
 };
 
 export const AppContext = createContext<ContextType>(initialValue);
@@ -74,6 +78,9 @@ export function AppContextProvider({ children }: Props) {
   //search:
   const [searchCrypto, setSearchCrypto] = useState("");
 
+  //calc MC:
+  const [result, setResult] = useState(initialValue.result);
+
   return (
     <AppContext.Provider
       value={{
@@ -85,6 +92,8 @@ export function AppContextProvider({ children }: Props) {
         fetchCryptos,
         searchCrypto,
         setSearchCrypto,
+        result,
+        setResult,
       }}
     >
       {children}

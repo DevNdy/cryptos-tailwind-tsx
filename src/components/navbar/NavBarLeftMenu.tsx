@@ -24,8 +24,8 @@ const NavBarLeftMenu = () => {
         <li className={liStyle} onClick={() => toRoute("/classement")}>
           Classement
         </li>
-        <li className={liStyle} onClick={() => toRoute("/analyses")}>
-          Analyses
+        <li className={liStyle} onClick={() => toRoute("/marketcap")}>
+          MarketCap
         </li>
       </ul>
     </nav>
