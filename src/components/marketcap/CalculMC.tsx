@@ -1,8 +1,8 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import { AppContext } from "../../context/context";
 
 const CalculMC: React.FC = () => {
-  const { result, setResult } = useContext(AppContext);
+  const { setResult } = useContext(AppContext);
 
   const [nbrToken, setNbrToken] = useState<number>(0);
   const [priceToken, setPriceToken] = useState<number>(0);

@@ -1,9 +1,7 @@
-import React, { useContext, useState } from "react";
-import { createSearchParams, useNavigate } from "react-router-dom";
-import { AppContext } from "../../context/context";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const NavBarLeftMenu: React.FC = () => {
-  const { isSelect, setIsSelect } = useContext(AppContext);
   const navigate = useNavigate();
 
   function toRoute(route: string) {

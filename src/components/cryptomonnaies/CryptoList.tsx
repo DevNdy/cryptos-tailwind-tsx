@@ -5,6 +5,7 @@ import CardCrypto from "./CardCrypto";
 
 const CryptoList: React.FC = () => {
   const { cryptos, searchCrypto, fetchCryptos } = useContext(AppContext);
+
   return (
     <div className="pb-4 mt-5">
       <InfiniteScroll
