@@ -61,7 +61,7 @@ export function AppContextProvider({ children }: Props) {
         offset: "0",
       },
       headers: {
-        "X-RapidAPI-Key": "f00c50b32amsh870af7005927c13p198a37jsn6cf946d213f5",
+        "X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
         "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
       },
     };
