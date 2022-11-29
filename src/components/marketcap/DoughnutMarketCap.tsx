@@ -23,7 +23,7 @@ const DoughnutMarketCap: React.FC = () => {
                     f.name === "Ethereum" ||
                     f.name === "Tether USD" ||
                     f.name === "USDC" ||
-                    f.name === "Binance Coin"
+                    f.name === "BNB"
                 )
                 .map((e: any) => e.marketCap),
               borderColor: "white",
@@ -34,7 +34,7 @@ const DoughnutMarketCap: React.FC = () => {
                     f.name === "Ethereum" ||
                     f.name === "Tether USD" ||
                     f.name === "USDC" ||
-                    f.name === "Binance Coin"
+                    f.name === "BNB"
                 )
                 .map((e: any) => e.color),
               hoverOffset: 7,
